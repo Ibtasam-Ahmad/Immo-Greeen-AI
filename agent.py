@@ -1,7 +1,7 @@
-import openai
+import openai import OpenAI
 
 # Initialize OpenAI API client
-client = openai.OpenAI(api_key="your_openai_api_key")
+client = OpenAI(api_key="your_openai_api_key")
 
 # System prompt for providing general company and service information
 prompt = """
