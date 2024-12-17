@@ -1,4 +1,4 @@
-import openai import OpenAI
+from openai import OpenAI
 
 # Initialize OpenAI API client
 client = OpenAI(api_key="your_openai_api_key")
