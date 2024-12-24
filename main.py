@@ -152,7 +152,7 @@ if user_query := st.chat_input(f"Ask about {topic}"):
         with st.spinner("Searching the web..."):
             web_content = fetch_and_process_web_results(user_query)
             combined_context = f"Based on the following web content:\n{web_content}"
-            response = generate_chat_response(f'user query is {user_query} and topic is {topic}', context=combined_context)
+            response = generate_chat_response(f'user query is {user_query} and topic is {topic}', context=f'the selected topic is {topic} and web response is {combined_context}')
     else:
         with st.spinner("Generating a response..."):
             response = generate_chat_response(f'user query is {user_query} and topic is {topic}')
